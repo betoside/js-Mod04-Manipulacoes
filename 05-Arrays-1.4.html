@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>05-Arrays-1.4.html</title>
+</head>
+<body>
+    <script>
+       let lista = ['Ovo','Mel','Corante','Massa'] ;
+       let respString = lista.toString();
+       console.log("toString: " + respString);
+       console.log("-".repeat(8));
+
+       let joinString = lista.join("==");
+       console.log('join: ' + joinString);
+       console.log("-".repeat(8));
+
+       let indexOfString = lista.indexOf('Corante');
+       console.log("indexOfString: 'Corante' => " + indexOfString);
+       console.log("-".repeat(8));
+       
+       lista.pop();
+       let res = lista;
+       console.log("lista.pop: " + res);
+       console.log("-".repeat(8));
+       
+       lista.shift();
+       res = lista;
+       console.log("lista.shift: " + res);
+       console.log("-".repeat(8));
+       
+       lista.push('Banana');
+       res = lista;
+       console.log("lista.push: " + res);
+       console.log("-".repeat(8));
+       
+       lista[0] = 'MelSS';
+       res = lista;
+       console.log("lista[0]: " + res);
+       console.log("-".repeat(8));
+       
+       lista[3] = 'Morango';
+       res = lista;
+       console.log("lista[3]: " + res);
+       console.log("-".repeat(8));
+       
+       lista[lista.length] = 'Uva';
+       res = lista;
+       console.log("lista[lista.length]: " + res);
+       console.log("-".repeat(8));
+       
+       lista.splice((lista.length-1), 1);
+       res = lista;
+       console.log("lista.splice: " + res);
+       console.log("-".repeat(8));
+
+       lista2 = ['Forno', 'Panela', 'Colher'];
+       res = lista.concat(lista2);
+       console.log("lista.concat(lista2): " + res);
+       console.log("-".repeat(8));
+
+       listaOrdem = lista.sort();
+       console.log("lista.sort(): " + listaOrdem);
+       console.log("-".repeat(8));
+
+       listaOrdem = listaOrdem.reverse();
+       console.log("listaOrdem.reverse(): " + listaOrdem);
+       console.log("-".repeat(8));
+
+       console.log('x2 cada item do array');
+       listaNro1 = [10, 6, 15, 7];
+       listaNro2 = listaNro1.map(function(item) {
+           return item * 2;
+       });
+       console.log("listaNro1.map: " + listaNro2);
+       console.log("-".repeat(8));
+
+       console.log('x2, outra forma');
+       listaNro3 = [];
+       for(i in listaNro1){
+           listaNro3.push(listaNro1[i] * 2);
+       }
+       console.log("listaNro3.push: " + listaNro3);
+       console.log("-".repeat(8));
+
+       console.log('filter(item > 14) ' + listaNro1);
+       listaNro4 = listaNro1.filter(function(item) {
+           if (item > 14) {
+               return true;
+           } else {
+            return false;
+           }
+       });
+       console.log("listaNro4 filter: " + listaNro4);
+       console.log("-".repeat(8));
+
+       console.log('every(item < 50) "todo mundo tem que ser MENOR" ' + listaNro1);
+       listaNro5 = listaNro1.every(function(item) {
+        //    if (item < 50) {
+        //        return true;
+        //    } else {
+        //     return false;
+        //    }
+            return (item < 50)? true : false ;
+       });
+       console.log("listaNro5 every: " + listaNro5);
+       console.log("-".repeat(8));
+
+       console.log('find(item == 7) [' + listaNro1 + ']');
+       listaNro6 = listaNro1.find(function(item) {
+            return (item == 7)? true : false ;
+       });
+       console.log("listaNro6 find: " + listaNro6);
+    //    console.log("-".repeat(8));
+
+       listaNro7 = listaNro1.findIndex(function(item) {
+            return (item == 7)? true : false ;
+       });
+       console.log("listaNro7 findIndex: " + listaNro7);
+       console.log("-".repeat(8));
+
+       listaUsers = [
+           {id:1, nome:'betao', esporte:'surf'},
+           {id:2, nome:'kaiane', esporte:'crossfit'},
+           {id:3, nome:'juneca', esporte:'skate'}
+       ];
+       console.log(listaUsers);
+       pessoa = listaUsers.find(function(item) {
+            // return (item.nome == 'betao')? true : false ;
+            return (item.id == 2)? true : false ;
+            // return (item.nome == 'betao')? true : false ;
+       });
+       console.log("item.id == 2: ");
+       console.log("listaUsers.find: " + pessoa);
+       console.log("listaUsers.find: " + pessoa.id);
+       console.log("listaUsers.find: " + pessoa.nome);
+       console.log("listaUsers.find: " + pessoa.esporte);
+       console.log("-".repeat(8));
+
+
+    </script>
+    <pre>
+        let lista = ['Ovo','Mel','Corante','Massa'] ;
+        let respString = lista.toString();
+        console.log("toString: " + respString);
+        console.log("-".repeat(8));
+ 
+        let joinString = lista.join("==");
+        console.log('join: ' + joinString);
+        console.log("-".repeat(8));
+ 
+        let indexOfString = lista.indexOf('Corante');
+        console.log("indexOfString: 'Corante' => " + indexOfString);
+        console.log("-".repeat(8));
+        
+        lista.pop();
+        let res = lista;
+        console.log("lista.pop: " + res);
+        console.log("-".repeat(8));
+        
+        lista.shift();
+        res = lista;
+        console.log("lista.shift: " + res);
+        console.log("-".repeat(8));
+        
+        lista.push('Banana');
+        res = lista;
+        console.log("lista.push: " + res);
+        console.log("-".repeat(8));
+        
+        lista[0] = 'MelSS';
+        res = lista;
+        console.log("lista[0]: " + res);
+        console.log("-".repeat(8));
+        
+        lista[3] = 'Morango';
+        res = lista;
+        console.log("lista[3]: " + res);
+        console.log("-".repeat(8));
+        
+        lista[lista.length] = 'Uva';
+        res = lista;
+        console.log("lista[lista.length]: " + res);
+        console.log("-".repeat(8));
+        
+        lista.splice((lista.length-1), 1);
+        res = lista;
+        console.log("lista.splice: " + res);
+        console.log("-".repeat(8));
+ 
+        lista2 = ['Forno', 'Panela', 'Colher'];
+        res = lista.concat(lista2);
+        console.log("lista.concat(lista2): " + res);
+        console.log("-".repeat(8));
+ 
+        listaOrdem = lista.sort();
+        console.log("lista.sort(): " + listaOrdem);
+        console.log("-".repeat(8));
+ 
+        listaOrdem = listaOrdem.reverse();
+        console.log("listaOrdem.reverse(): " + listaOrdem);
+        console.log("-".repeat(8));
+ 
+        console.log('x2 cada item do array');
+        listaNro1 = [10, 6, 15, 7];
+        listaNro2 = listaNro1.map(function(item) {
+            return item * 2;
+        });
+        console.log("listaNro1.map: " + listaNro2);
+        console.log("-".repeat(8));
+ 
+        console.log('x2, outra forma');
+        listaNro3 = [];
+        for(i in listaNro1){
+            listaNro3.push(listaNro1[i] * 2);
+        }
+        console.log("listaNro3.push: " + listaNro3);
+        console.log("-".repeat(8));
+ 
+        console.log('filter(item > 14) ' + listaNro1);
+        listaNro4 = listaNro1.filter(function(item) {
+            if (item > 14) {
+                return true;
+            } else {
+             return false;
+            }
+        });
+        console.log("listaNro4 filter: " + listaNro4);
+        console.log("-".repeat(8));
+ 
+        console.log('every(item < 50) "todo mundo tem que ser MENOR" ' + listaNro1);
+        listaNro5 = listaNro1.every(function(item) {
+         //    if (item < 50) {
+         //        return true;
+         //    } else {
+         //     return false;
+         //    }
+             return (item < 50)? true : false ;
+        });
+        console.log("listaNro5 every: " + listaNro5);
+        console.log("-".repeat(8));
+ 
+        console.log('find(item == 7) [' + listaNro1 + ']');
+        listaNro6 = listaNro1.find(function(item) {
+             return (item == 7)? true : false ;
+        });
+        console.log("listaNro6 find: " + listaNro6);
+     //    console.log("-".repeat(8));
+ 
+        listaNro7 = listaNro1.findIndex(function(item) {
+             return (item == 7)? true : false ;
+        });
+        console.log("listaNro7 findIndex: " + listaNro7);
+        console.log("-".repeat(8));
+ 
+        listaUsers = [
+            {id:1, nome:'betao', esporte:'surf'},
+            {id:2, nome:'kaiane', esporte:'crossfit'},
+            {id:3, nome:'juneca', esporte:'skate'}
+        ];
+        console.log(listaUsers);
+        pessoa = listaUsers.find(function(item) {
+             // return (item.nome == 'betao')? true : false ;
+             return (item.id == 2)? true : false ;
+             // return (item.nome == 'betao')? true : false ;
+        });
+        console.log("item.id == 2: ");
+        console.log("listaUsers.find: " + pessoa);
+        console.log("listaUsers.find: " + pessoa.id);
+        console.log("listaUsers.find: " + pessoa.nome);
+        console.log("listaUsers.find: " + pessoa.esporte);
+        console.log("-".repeat(8));
+ 
+ 
+     </pre>
+</body>
+</html>

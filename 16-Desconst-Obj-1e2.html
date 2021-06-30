@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16-Desconst-Obj-1e2.html</title>
+</head>
+<body>
+    <script>
+        pessoa = {
+            nome: 'Fabio',
+            esporte: 'skate',
+            bairro: 'jardim das flores',
+            profissao: 'Professor Ed Física',
+            social: {
+                instagram: {
+                    url: '@fabioFotos',
+                    seguidores: 1000
+                },
+                youtube: '@fabioVideos',
+            },
+            perfil: function() {
+                return `${this.nome} é ${this.profissao} e ensina a andar de ${this.esporte}`;
+            }
+        };
+        // console.log(pessoa.social.instagram);
+        console.log("pessoa.perfil(): ");
+        console.log(pessoa.perfil());
+        console.log("-".repeat(11));
+
+        let {nome:nome1, esporte:esporte1, outroEsporte = "surf"} = pessoa;
+        console.log('let {nome:nome1, esporte:esporte1, outroEsporte = "surf"} = pessoa');
+        console.log(nome1, esporte1, outroEsporte);
+        console.log("-".repeat(11));
+
+        let {nome:nome2, esporte:esporte2, social:{ instagram: {url:urlInstagram} }} = pessoa;
+        console.log("let {nome:nome2, esporte:esporte2, social:{ instagram: {url:urlInstagram} }} = pessoa");
+        console.log("Nome: " + nome2);
+        console.log("Esporte: " + esporte2);
+        console.log("Instagram: " + urlInstagram);
+        console.log("-".repeat(11));
+
+        function pegarNomeCompleto({nome, esporte, profissao, sobrenome = 'silva', social:{instagram:{url:instagram}}}) {
+            // FORMA 1
+            // return obj.nome + ', ' + obj.esporte + ', ' + obj.profissao;
+
+            // FORMA 2
+            // let nome = obj.nome;
+            // let esporte = obj.esporte;
+            // let profissao = obj.profissao;
+
+            // FORMA 3
+            return `${nome}, ${esporte}, ${profissao}, ${sobrenome},  (siga em ${instagram})`;
+
+
+        }
+        
+        console.log("pegarNomeCompleto(pessoa)");
+        console.log(pegarNomeCompleto(pessoa));
+        console.log("-".repeat(11));
+
+
+    </script>
+    <pre>
+
+        pessoa = {
+            nome: 'Fabio',
+            esporte: 'skate',
+            bairro: 'jardim das flores',
+            profissao: 'Professor Ed Física',
+            social: {
+                instagram: {
+                    url: '@fabioFotos',
+                    seguidores: 1000
+                },
+                youtube: '@fabioVideos',
+            },
+            perfil: function() {
+                return `${this.nome} é ${this.profissao} e ensina a andar de ${this.esporte}`;
+            }
+        };
+        // console.log(pessoa.social.instagram);
+        console.log("pessoa.perfil(): ");
+        console.log(pessoa.perfil());
+        console.log("-".repeat(11));
+
+        let {nome:nome1, esporte:esporte1, outroEsporte = "surf"} = pessoa;
+        console.log('let {nome:nome1, esporte:esporte1, outroEsporte = "surf"} = pessoa');
+        console.log(nome1, esporte1, outroEsporte);
+        console.log("-".repeat(11));
+
+        let {nome:nome2, esporte:esporte2, social:{ instagram: {url:urlInstagram} }} = pessoa;
+        console.log("let {nome:nome2, esporte:esporte2, social:{ instagram: {url:urlInstagram} }} = pessoa");
+        console.log("Nome: " + nome2);
+        console.log("Esporte: " + esporte2);
+        console.log("Instagram: " + urlInstagram);
+        console.log("-".repeat(11));
+
+        function pegarNomeCompleto({nome, esporte, profissao, sobrenome = 'silva', social:{instagram:{url:instagram}}}) {
+            // FORMA 1
+            // return obj.nome + ', ' + obj.esporte + ', ' + obj.profissao;
+
+            // FORMA 2
+            // let nome = obj.nome;
+            // let esporte = obj.esporte;
+            // let profissao = obj.profissao;
+
+            // FORMA 3
+            return `${nome}, ${esporte}, ${profissao}, ${sobrenome},  (siga em ${instagram})`;
+
+
+        }
+        
+        console.log("pegarNomeCompleto(pessoa)");
+        console.log(pegarNomeCompleto(pessoa));
+        console.log("-".repeat(11));
+
+
+    
+    </pre>
+</body>
+</html>

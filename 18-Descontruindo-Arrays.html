@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18-Descontruindo-Arrays.html</title>
+</head>
+<body>
+    <script>
+        let info = [ 'fireguri', 'adriano', 'bass', '@adrianoJovi'];
+
+        let [ apelido, nome,  instrumento,  instagram] = info;
+
+        console.log( info );
+        console.log( apelido, nome,  instrumento,  instagram );
+        console.log("-".repeat(11));
+
+        let [ a, b, c, d ] = info;
+        console.log( "a, b, c, d: " );
+        console.log( a, b, c, d );
+        console.log("-".repeat(11));
+
+        // pegar nome e instagram
+        let [, nome2, , instagram2] = info;
+        console.log("Pegar apenas nome e instagram: ");
+        console.log("nome2: ", nome2, "| instagram2: ", instagram2);
+        console.log("-".repeat(11));
+
+        let [apelido3, nome3, instrumento3, instagram3] = info;
+        console.log("apelido3: ", apelido3, "| instagram3: ", instagram3);
+        console.log("-".repeat(11));
+
+        function criarArray() {
+            return [1, 2, 3];
+        }
+        let numeros = criarArray();
+        let [aa, bb, cc] = numeros;
+        console.log("[aa, bb, cc]: ", aa, bb, cc);
+
+    </script>
+    <pre>
+
+        let info = [ 'fireguri', 'adriano', 'bass', '@adrianoJovi'];
+
+        let [ apelido, nome,  instrumento,  instagram] = info;
+
+        console.log( info );
+        console.log( apelido, nome,  instrumento,  instagram );
+        console.log("-".repeat(11));
+
+        let [ a, b, c, d ] = info;
+        console.log( "a, b, c, d: " );
+        console.log( a, b, c, d );
+        console.log("-".repeat(11));
+
+        // pegar nome e instagram
+        let [, nome2, , instagram2] = info;
+        console.log("Pegar apenas nome e instagram: ");
+        console.log("nome2: ", nome2, "| instagram2: ", instagram2);
+        console.log("-".repeat(11));
+
+        let [apelido3, nome3, instrumento3, instagram3] = info;
+        console.log("apelido3: ", apelido3, "| instagram3: ", instagram3);
+        console.log("-".repeat(11));
+
+        function criarArray() {
+            return [1, 2, 3];
+        }
+        let numeros = criarArray();
+        let [aa, bb, cc] = numeros;
+        console.log("[aa, bb, cc]: ", aa, bb, cc);
+
+    
+    </pre>
+</body>
+</html>

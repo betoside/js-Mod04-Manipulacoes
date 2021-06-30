@@ -1,0 +1,44 @@
+
+Módulo 4: Manipulações, Arrow, Ajax, etc
+
+    Mod04-Manipulacoes
+    git: js-Mod04-Manipulacoes
+
+01: Métodos de String (1/3)
+02: Métodos de String (2/3)
+03: Métodos de String (3/3)
+04: Métodos de Numbers
+
+    05: Métodos de Arrays (1/4)
+        05-Arrays-1.4.html
+
+        06: Métodos de Arrays (2/4)
+        07: Métodos de Arrays (3/4)
+        08: Métodos de Arrays (4/4)
+
+09: Datas (1/3)
+10: Datas (2/3)
+11: Datas (3/3)
+12: Matemática
+13: Intervalos (1/2)
+14: Intervalos (2/2)
+
+    15: Template Strings
+        15-Template-Strings.html
+
+    16: Descontruindo Objetos (1/2)
+    17: Descontruindo Objetos (2/2)
+        16-Desconst-Obj-1e2.html
+
+    18: Descontruindo Arrays
+        18-Descontruindo-Arrays.html
+
+19: Arrow Functions
+20: Operador Spread
+21: Operador Rest
+22: Includes e Repeat
+
+    23: Objeto: Key, Values e Entries
+        23-Objeto-Key-Values-Entries.html
+
+24: String, padStart, padEnd
